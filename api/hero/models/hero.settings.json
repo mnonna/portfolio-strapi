@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "hero",
+  "info": {
+    "name": "Hero"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hero_background": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "hero_secondary_img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "hero_title": {
+      "type": "string"
+    },
+    "hero_lead_text": {
+      "type": "string"
+    },
+    "hero_desc_text": {
+      "type": "richtext"
+    }
+  }
+}

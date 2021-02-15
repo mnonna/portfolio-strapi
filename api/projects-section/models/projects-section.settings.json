@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "projects_sections",
+  "info": {
+    "name": "Projects Section"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "lead_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "section_description": {
+      "type": "richtext"
+    }
+  }
+}
